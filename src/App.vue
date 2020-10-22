@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <h2>Developer</h2>
     <h1>Simon Marenkov</h1>
   </div>
 </template>
