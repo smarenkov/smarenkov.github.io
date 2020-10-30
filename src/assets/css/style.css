@@ -1,0 +1,44 @@
+.main-block {
+    font-family: Ebrima, monospace;
+    margin-top: 175px;
+}
+
+.name-block {
+    font-size: 70px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.name-block span {
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: #2c3e50;
+}
+
+.name-block span:nth-child(even) {
+    color: #2c3e40;
+    letter-spacing: -50px;
+}
+
+.main-block:hover span:nth-child(even) {
+    letter-spacing: 0;
+}
+
+.main-block:hover span:nth-child(2) {
+    transition-delay: 0s;
+}
+
+.contact-me-line {
+    margin-top: 25px;
+}
+
+.skills-box .icon {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.contact-me .icon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
