@@ -1,34 +1,52 @@
 <template>
   <div class="row center-xs middle-xs">
 
-    <div class="main-block col-xs-12 col-md-10 col-lg-8">
+    <div class="main-block col-xs-12 col-md-10 col-lg-8" @mouseenter="Mouseover(true)" @mouseleave="Mouseover(false)">
 
-      <div class="name-block">
-        <span>S</span><span>imon</span>
-        <span>Marenkov</span>
+      <img class="me" src="../assets/img/me.jpg" alt="Simon Marenkov">
+
+      <div class="name-block name-block-mobile">
+        <transition name="name-block">
+          <div v-if="show">
+            <span>Simon<br>Marenkov</span>
+          </div>
+        </transition>
       </div>
+
+      <transition name="name-block">
+        <div v-if="show" class="name-block name-block-desktop">
+          <span>S</span><span>imon</span>
+          <span v-if="!mouseover">.</span><span v-if="mouseover" style="padding-left: 30px"></span>
+          <span>Marenkov</span>
+        </div>
+      </transition>
 
       <div class="row center-md skills-box">
 
-        <div class="col-xs-12 col-sm">
+        <div class="col-xs-12">
+          <h1>Developer</h1>
+        </div>
 
-          <h2>Web developer</h2>
+        <div class="col-xs col-sm">
+
+          <h2>Web</h2>
 
           <img class="icon" src="../assets/img/icon/javascript.png" alt="javascript-icon">
           <img class="icon" src="../assets/img/icon/vue.png" alt="vue-icon">
           <img class="icon" src="../assets/img/icon/java.png" alt="java-icon">
         </div>
 
-        <div class="col-xs-12 col-sm">
+        <div class="col-xs col-sm">
 
-          <h2>Mobile developer</h2>
+          <h2>Mobile</h2>
 
           <img class="icon" src="../assets/img/icon/flutter.png" alt="flutter-icon">
           <img class="icon" src="../assets/img/icon/dart.png" alt="dart-icon">
         </div>
 
-        <div class="col-xs-12 col-sm">
-          <h2>Game developer</h2>
+        <div class="col-xs col-sm">
+
+          <h2>Game</h2>
 
           <img class="icon" src="../assets/img/icon/unity.png" alt="unity-icon">
           <img class="icon" src="../assets/img/icon/c-sharp.png" alt="c-sharp-icon">
@@ -66,6 +84,29 @@
 <script>
 export default {
   name: 'AboutMe',
+
+  data(){
+    return {
+      mouseover: false,
+      show: false
+    }
+  },
+
+  mounted() {
+    this.showName();
+  },
+
+  methods: {
+    Mouseover: function (value) {
+      this.mouseover = value;
+      console.log(this.mouseover)
+    },
+
+    showName: function () {
+      this.show = true;
+    }
+  }
+
 }
 </script>
 

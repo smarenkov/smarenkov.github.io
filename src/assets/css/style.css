@@ -1,32 +1,70 @@
 .main-block {
     font-family: Ebrima, monospace;
-    margin-top: 175px;
+    margin-top: 4%;
 }
 
+.me {
+    border-radius: 50%;
+}
+
+/*Desktop*/
+@media screen and (min-width: 550px) {
+    .name-block-mobile {
+        visibility: hidden;
+        display: none;
+    }
+    .name-block-desktop {
+        visibility: visible;
+        display: block;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 550px) {
+    .name-block-desktop {
+        visibility: hidden;
+        display: none;
+    }
+    .name-block-mobile {
+        visibility: visible;
+        display: block;
+    }
+}
+
+/*Mouse cursor animation */
 .name-block {
     font-size: 70px;
     cursor: pointer;
     white-space: nowrap;
 }
-
 .name-block span {
     display: inline-block;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     color: #2c3e50;
 }
-
-.name-block span:nth-child(even) {
+.name-block span:nth-child(2) {
     color: #2c3e40;
     letter-spacing: -50px;
 }
-
-.main-block:hover span:nth-child(even) {
+.main-block:hover span:nth-child(2) {
     letter-spacing: 0;
 }
 
-.main-block:hover span:nth-child(2) {
-    transition-delay: 0s;
+/*.main-block:hover span:nth-child(even) {*/
+/*    transition-delay: 0s;*/
+/*}*/
+
+/*Display Animation*/
+.name-block-enter-active {
+    transition: all 3s ease;
+}
+.name-block-leave-active {
+    transition: all .10s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.name-block-enter, .name-block-leave-to  {
+    transform: translateX(10px);
+    opacity: 0;
 }
 
 .contact-me-line {
