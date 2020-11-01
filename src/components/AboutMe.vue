@@ -59,19 +59,19 @@
       <div class="row center-xs contact-me">
 <!--        GitHub-->
         <div class="icon">
-          <a href="https://github.com/smarenkov">
+          <a href="https://github.com/smarenkov" target="_blank">
             <img src="../assets/img/icon/github.png" alt="GitHub-icon">
           </a>
         </div>
 <!--        LinkedIn-->
         <div class="icon">
-          <a href="https://www.linkedin.com/in/semyon-marenkov-b14078173">
+          <a href="https://www.linkedin.com/in/semyon-marenkov-b14078173" target="_blank">
             <img src="../assets/img/icon/linkedin.png" alt="LinkedIn-icon">
           </a>
         </div>
 <!--        Telegram-->
         <div class="icon">
-          <a href="https://t.me/smarenkov">
+          <a href="https://t.me/smarenkov" target="_blank">
             <img src="../assets/img/icon/telegram.png" alt="Telegram-icon">
           </a>
         </div>
