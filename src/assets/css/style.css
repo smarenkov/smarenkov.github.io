@@ -1,39 +1,21 @@
 .main-block {
     font-family: Ebrima, monospace;
-    margin-top: 4%;
+    margin-top: 5%;
 }
 
 .me {
     border-radius: 50%;
 }
 
-/*Desktop*/
-@media screen and (min-width: 550px) {
-    .name-block-mobile {
-        visibility: hidden;
-        display: none;
-    }
-    .name-block-desktop {
-        visibility: visible;
-        display: block;
-    }
+.name-block-desktop {
+    font-size: 60px;
 }
-
-/*Mobile*/
-@media screen and (max-width: 550px) {
-    .name-block-desktop {
-        visibility: hidden;
-        display: none;
-    }
-    .name-block-mobile {
-        visibility: visible;
-        display: block;
-    }
+.name-block-mobile {
+    font-size: 40px;
 }
 
 /*Mouse cursor animation */
 .name-block {
-    font-size: 70px;
     cursor: pointer;
     white-space: nowrap;
 }

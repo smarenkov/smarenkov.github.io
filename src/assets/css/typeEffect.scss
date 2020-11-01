@@ -1,0 +1,29 @@
+.title-typing-effect {
+    font-family: "Lucida Console";
+    font-size: 25px;
+    font-weight: normal;
+    height: 70px;
+
+    span.typed-text {
+        color: #241E17;
+    }
+
+    span.cursor {
+        display: inline-block;
+        margin-left: 3px;
+        width: 3px;
+        height: 32px;
+        background-color: #241E17;
+        animation: cursorBlink 1s infinite;
+    }
+
+    span.cursor.typing {
+        animation: none;
+    }
+}
+
+@keyframes cursorBlink {
+    49% { background-color: #241E17; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+}

@@ -1,53 +1,54 @@
 <template>
   <div class="row center-xs middle-xs">
 
-    <div class="main-block col-xs-12 col-md-10 col-lg-8" @mouseenter="Mouseover(true)" @mouseleave="Mouseover(false)">
+    <div class="main-block col-xs-12 col-md-10 col-lg-8"
+         @mouseenter="mouseoverUpdate(true)" @mouseleave="mouseoverUpdate(false)">
 
-      <img class="me" src="../assets/img/me.jpg" alt="Simon Marenkov">
+      <img class="me col-xs-7" src="../assets/img/me.jpg" alt="Simon Marenkov">
 
-      <div class="name-block name-block-mobile">
+<!--      Mobile-->
+      <div v-if="isMobile" class="name-block name-block-mobile">
         <transition name="name-block">
           <div v-if="show">
-            <span>Simon<br>Marenkov</span>
+            <span>Simon Marenkov</span>
           </div>
         </transition>
       </div>
 
-      <transition name="name-block">
-        <div v-if="show" class="name-block name-block-desktop">
-          <span>S</span><span>imon</span>
-          <span v-if="!mouseover">.</span><span v-if="mouseover" style="padding-left: 30px"></span>
-          <span>Marenkov</span>
-        </div>
-      </transition>
+<!--      Desktop-->
+      <div v-if="!isMobile" class="name-block name-block-desktop">
+        <transition name="name-block">
+          <div v-if="show">
+            <span>S</span><span>imon</span>
+            <span v-if="!mouseover">.</span><span v-if="mouseover" style="padding-left: 30px"></span>
+            <span>Marenkov</span>
+          </div>
+        </transition>
+      </div>
 
-      <div class="row center-md skills-box">
-
+      <div class="row center-xs skills-box">
         <div class="col-xs-12">
-          <h1>Developer</h1>
+          <h1 class="title-typing-effect">
+            <span class="typed-text">{{ typingEffect.text }}</span>
+            <span class="cursor" :class="{'typing': TypingEffect.isTypeStateTyping(typingEffect)}">&nbsp;</span>
+          </h1>
         </div>
 
-        <div class="col-xs col-sm">
-
+        <div class="col-xs col-sm" @click="TypingEffect.addToTyping(web, typingEffect)">
           <h2>Web</h2>
-
           <img class="icon" src="../assets/img/icon/javascript.png" alt="javascript-icon">
           <img class="icon" src="../assets/img/icon/vue.png" alt="vue-icon">
           <img class="icon" src="../assets/img/icon/java.png" alt="java-icon">
         </div>
 
-        <div class="col-xs col-sm">
-
+        <div class="col-xs col-sm" @click="TypingEffect.addToTyping(mobile, typingEffect)">
           <h2>Mobile</h2>
-
           <img class="icon" src="../assets/img/icon/flutter.png" alt="flutter-icon">
           <img class="icon" src="../assets/img/icon/dart.png" alt="dart-icon">
         </div>
 
-        <div class="col-xs col-sm">
-
+        <div class="col-xs col-sm" @click="TypingEffect.addToTyping(game, typingEffect)">
           <h2>Game</h2>
-
           <img class="icon" src="../assets/img/icon/unity.png" alt="unity-icon">
           <img class="icon" src="../assets/img/icon/c-sharp.png" alt="c-sharp-icon">
         </div>
@@ -74,22 +75,38 @@
             <img src="../assets/img/icon/telegram.png" alt="Telegram-icon">
           </a>
         </div>
-
       </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
+  import { isMobile } from 'mobile-device-detect';
+  import TypingEffect, {TypingState} from "../assets/js/typingEffect";
+
 export default {
   name: 'AboutMe',
 
-  data(){
+  data() {
     return {
+      isMobile: isMobile,
       mouseover: false,
-      show: false
+      show: false,
+
+      web: "Full Stack Web Developer",
+      mobile: "Flutter Mobile App Developer",
+      game: "Unity Game Developer",
+
+      TypingEffect: TypingEffect.prototype,
+      typingEffect: null,
     }
+  },
+
+  created() {
+    this.typingEffect = new TypingEffect('', TypingState.None, ['Select Skills'], 90, 40, 200, 0, 0);
+    this.TypingEffect.startTyping(this.typingEffect)
   },
 
   mounted() {
@@ -97,19 +114,17 @@ export default {
   },
 
   methods: {
-    Mouseover: function (value) {
+    mouseoverUpdate(value) {
       this.mouseover = value;
-      console.log(this.mouseover)
     },
-
-    showName: function () {
+    showName() {
       this.show = true;
-    }
-  }
-
+    },
+  },
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
   @import "../assets/css/style.css";
+  @import "../assets/css/typeEffect.scss";
 </style>
