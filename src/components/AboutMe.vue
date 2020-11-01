@@ -96,7 +96,7 @@ export default {
       show: false,
 
       web: "Full Stack Web Developer",
-      mobile: "Flutter Mobile App Developer",
+      mobile: "Flutter Mobile Developer",
       game: "Unity Game Developer",
 
       TypingEffect: TypingEffect.prototype,
