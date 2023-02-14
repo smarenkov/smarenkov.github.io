@@ -65,7 +65,7 @@
         </div>
 <!--        LinkedIn-->
         <div class="icon">
-          <a href="https://www.linkedin.com/in/semyon-marenkov-b14078173" target="_blank">
+          <a href="https://www.linkedin.com/in/simon-marenkov-b14078173/" target="_blank">
             <img src="../assets/img/icon/linkedin.png" alt="LinkedIn-icon">
           </a>
         </div>
