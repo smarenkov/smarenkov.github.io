@@ -4,7 +4,7 @@
     <div class="main-block col-xs-12 col-md-10 col-lg-8"
          @mouseenter="mouseoverUpdate(true)" @mouseleave="mouseoverUpdate(false)">
 
-    <div class="myself">
+    <div class="me">
       <img class="col-xs-7 col-sm-6 col-md-5 col-lg-4" src="../assets/img/me.jpg" alt="Simon Marenkov">
     </div>
 
