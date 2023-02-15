@@ -33,10 +33,6 @@
     letter-spacing: 0;
 }
 
-/*.main-block:hover span:nth-child(even) {*/
-/*    transition-delay: 0s;*/
-/*}*/
-
 /*Display Animation*/
 .name-block-enter-active {
     transition: all 3s ease;
