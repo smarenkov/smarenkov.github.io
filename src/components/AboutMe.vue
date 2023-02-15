@@ -4,7 +4,7 @@
     <div class="main-block col-xs-12 col-md-10 col-lg-8"
          @mouseenter="mouseoverUpdate(true)" @mouseleave="mouseoverUpdate(false)">
 
-      <img class="me col-xs-7" src="../assets/img/me.jpg" alt="Simon Marenkov" height="328" width="344">
+      <img class="me col-xs-7" src="../assets/img/me.jpg" alt="Simon Marenkov" style="max-height: 328; max-width: 344;">
 
 <!--      Mobile-->
       <div v-if="isMobile" class="name-block name-block-mobile">
