@@ -4,7 +4,9 @@
     <div class="main-block col-xs-12 col-md-10 col-lg-8"
          @mouseenter="mouseoverUpdate(true)" @mouseleave="mouseoverUpdate(false)">
 
-      <img class="me col-xs-7" src="../assets/img/me.jpg" alt="Simon Marenkov" style="max-height: 328; max-width: 344;">
+    <div class="myself">
+      <img class="col-xs-7 col-sm-6 col-md-5 col-lg-4" src="../assets/img/me.jpg" alt="Simon Marenkov">
+    </div>
 
 <!--      Mobile-->
       <div v-if="isMobile" class="name-block name-block-mobile">
@@ -83,8 +85,8 @@
 </template>
 
 <script>
-  import { isMobile } from 'mobile-device-detect';
-  import TypingEffect, {TypingState} from "../assets/js/typingEffect";
+import { isMobile } from 'mobile-device-detect';
+import TypingEffect, {TypingState} from "../assets/js/typingEffect";
 
 export default {
   name: 'AboutMe',
