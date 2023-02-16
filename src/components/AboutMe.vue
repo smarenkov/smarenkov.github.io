@@ -1,14 +1,14 @@
 <template>
   <div class="row center-xs middle-xs">
 
-    <div class="main-block col-xs-12 col-md-10 col-lg-8"
-         @mouseenter="mouseoverUpdate(true)" @mouseleave="mouseoverUpdate(false)">
+    <div class="main-block col-xs-12 col-md-10 col-lg-8" @mouseenter="mouseoverUpdate(true)"
+      @mouseleave="mouseoverUpdate(false)">
 
-    <div class="me">
-      <img class="col-xs-7 col-sm-6 col-md-5 col-lg-4" src="../assets/img/me.jpg" alt="Simon Marenkov">
-    </div>
+      <div class="me">
+        <img class="col-xs-7 col-sm-6 col-md-5 col-lg-4" src="../assets/img/me.jpg" alt="Simon Marenkov">
+      </div>
 
-<!--      Mobile-->
+      <!--Mobile-->
       <div v-if="isMobile" class="name-block name-block-mobile">
         <transition name="name-block">
           <div v-if="show">
@@ -17,7 +17,7 @@
         </transition>
       </div>
 
-<!--      Desktop-->
+      <!--Desktop-->
       <div v-if="!isMobile" class="name-block name-block-desktop">
         <transition name="name-block">
           <div v-if="show">
@@ -32,7 +32,7 @@
         <div class="col-xs-12">
           <h1 class="title-typing-effect">
             <span class="typed-text">{{ typingEffect.text }}</span>
-            <span class="cursor" :class="{'typing': TypingEffect.isTypeStateTyping(typingEffect)}">&nbsp;</span>
+            <span class="cursor" :class="{ 'typing': TypingEffect.isTypeStateTyping(typingEffect) }">&nbsp;</span>
           </h1>
         </div>
 
@@ -59,19 +59,19 @@
       <hr class="contact-me-line">
 
       <div class="row center-xs contact-me">
-<!--        GitHub-->
+        <!--GitHub-->
         <div class="icon">
           <a href="https://github.com/smarenkov" target="_blank">
             <img src="../assets/img/icon/github.png" alt="GitHub-icon">
           </a>
         </div>
-<!--        LinkedIn-->
+        <!--LinkedIn-->
         <div class="icon">
           <a href="https://www.linkedin.com/in/simon-marenkov-b14078173/" target="_blank">
             <img src="../assets/img/icon/linkedin.png" alt="LinkedIn-icon">
           </a>
         </div>
-<!--        Telegram-->
+        <!--Telegram-->
         <div class="icon">
           <a href="https://t.me/smarenkov" target="_blank">
             <img src="../assets/img/icon/telegram.png" alt="Telegram-icon">
@@ -86,7 +86,7 @@
 
 <script>
 import { isMobile } from 'mobile-device-detect';
-import TypingEffect, {TypingState} from "../assets/js/typingEffect";
+import TypingEffect, { TypingState } from "../assets/js/typingEffect";
 
 export default {
   name: 'AboutMe',
@@ -127,6 +127,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/style.css";
-  @import "../assets/css/typeEffect.scss";
+@import "../assets/css/style.css";
+@import "../assets/css/typeEffect.scss";
 </style>

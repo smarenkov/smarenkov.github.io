@@ -23,7 +23,15 @@
 }
 
 @keyframes cursorBlink {
-    49% { background-color: #241E17; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
+    49% {
+        background-color: #241E17;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
 }

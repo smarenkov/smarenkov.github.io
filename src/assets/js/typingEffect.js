@@ -1,4 +1,4 @@
-import {setTimeout} from "timers";
+import { setTimeout } from "timers";
 
 export const TypingState = Object.freeze({ Typing: 1, Erase: 2, None: 3 });
 
@@ -42,11 +42,11 @@ class TypingEffect {
     }
 
     typeText(typeEffect) {
-        if(typeEffect.charIndex < typeEffect.textArray[typeEffect.textArrayIndex].length) {
-            if(typeEffect.typingState === TypingState.None)
+        if (typeEffect.charIndex < typeEffect.textArray[typeEffect.textArrayIndex].length) {
+            if (typeEffect.typingState === TypingState.None)
                 typeEffect.typingState = TypingState.Typing
 
-            if(typeEffect.typingState === TypingState.Typing) {
+            if (typeEffect.typingState === TypingState.Typing) {
                 typeEffect.text += typeEffect.textArray[typeEffect.textArrayIndex].charAt(typeEffect.charIndex);
                 typeEffect.charIndex += 1;
 
@@ -59,8 +59,8 @@ class TypingEffect {
     }
 
     eraseText(typeEffect) {
-        if(typeEffect.charIndex > 0) {
-            if(typeEffect.typingState === TypingState.None)
+        if (typeEffect.charIndex > 0) {
+            if (typeEffect.typingState === TypingState.None)
                 typeEffect.typingState = TypingState.Erase
 
             typeEffect.text = typeEffect.textArray[typeEffect.textArrayIndex].substring(0, typeEffect.charIndex - 1);
@@ -72,10 +72,10 @@ class TypingEffect {
             typeEffect.typingState = TypingState.None
             typeEffect.textArray.splice(typeEffect.textArray[0], 1);
 
-            if(typeEffect.textArrayIndex >= typeEffect.textArray.length)
+            if (typeEffect.textArrayIndex >= typeEffect.textArray.length)
                 typeEffect.textArrayIndex = 0;
 
-            if(typeEffect.textArray.length !== 0) {
+            if (typeEffect.textArray.length !== 0) {
                 setTimeout(() => this.typeText(typeEffect), typeEffect.newTextDelay + 200);
             }
         }

@@ -10,6 +10,7 @@
 .name-block-desktop {
     font-size: 60px;
 }
+
 .name-block-mobile {
     font-size: 40px;
 }
@@ -19,16 +20,19 @@
     cursor: pointer;
     white-space: nowrap;
 }
+
 .name-block span {
     display: inline-block;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     color: #2c3e50;
 }
+
 .name-block span:nth-child(2) {
     color: #2c3e40;
     letter-spacing: -50px;
 }
+
 .main-block:hover span:nth-child(2) {
     letter-spacing: 0;
 }
@@ -37,10 +41,13 @@
 .name-block-enter-active {
     transition: all 3s ease;
 }
+
 .name-block-leave-active {
     transition: all .10s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.name-block-enter, .name-block-leave-to  {
+
+.name-block-enter,
+.name-block-leave-to {
     transform: translateX(10px);
     opacity: 0;
 }
