@@ -1,18 +1,9 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from "./router";
+import router from "./router"
 
-// VueYandexMetrika
-import VueYandexMetrika from 'vue-yandex-metrika'
-Vue.use(VueYandexMetrika, {
-  id: 68924467,
-  router: router,
-  env: process.env.NODE_ENV
-})
+const app = createApp(App)
 
-Vue.config.productionTip = false
+app.use(router)
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app')
+app.mount('#app')

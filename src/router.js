@@ -1,24 +1,23 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router'
+import AboutMe from './components/AboutMe'
+import FileSort from './components/FileSort'
 
-Vue.use(Router);
-
-const router = new Router({
-    mode: 'hash',
-    routes: [
-        {
-            path: '/',
-            name: 'AboutMe',
-            component: () => import('./components/AboutMe'),
-            meta: { layout: 'simple' }
-        },
-        {
-            path: '/filesort',
-            name: 'FileSort',
-            component: () => import('./components/FileSort'),
-            meta: { layout: 'simple' }
-        },
-    ]
-});
-
-export default router;
+const _routes = [
+    {
+      path: '/',
+      name: 'AboutMe',
+      component: AboutMe
+    },
+    {
+      path: '/filesort',
+      name: 'FileSort',
+      component: FileSort
+    }
+  ]
+  
+  const router = createRouter({
+    history: createWebHistory(),
+    routes: _routes
+  })
+  
+  export default router
