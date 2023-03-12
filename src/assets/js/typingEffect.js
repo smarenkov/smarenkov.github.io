@@ -1,5 +1,3 @@
-import { setTimeout } from "timers";
-
 export const TypingState = Object.freeze({ Typing: 1, Erase: 2, None: 3 });
 
 class TypingEffect {

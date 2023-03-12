@@ -14,7 +14,6 @@
     "node-sass": "^8.0.0",
     "sass": "^1.28.0",
     "sass-loader": "^10.0.4",
-    "timers": "^0.1.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.8",
     "vue-yandex-metrika": "^1.8.3"
