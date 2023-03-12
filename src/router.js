@@ -12,6 +12,12 @@ const router = new Router({
             component: () => import('./components/AboutMe'),
             meta: { layout: 'simple' }
         },
+        {
+            path: '/filesort',
+            name: 'FileSort',
+            component: () => import('./components/FileSort'),
+            meta: { layout: 'simple' }
+        },
     ]
 });
 
