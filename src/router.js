@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import AboutMe from './components/AboutMe'
 import FileSort from './components/FileSort'
 
@@ -16,7 +16,7 @@ const _routes = [
   ]
   
   const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: _routes
   })
   
