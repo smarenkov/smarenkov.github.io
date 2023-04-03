@@ -21,7 +21,7 @@
       <div v-if="!isMobile" class="name-block name-block-desktop">
         <transition name="name-block">
           <div v-if="show">
-            <span>S</span><span>imon</span>
+            <span>S</span><span>himon</span>
             <span v-if="!mouseover">.</span><span v-if="mouseover" style="padding-left: 30px"></span>
             <span>Marenkov</span>
           </div>
