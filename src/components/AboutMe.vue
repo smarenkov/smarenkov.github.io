@@ -48,12 +48,6 @@
           <img class="icon" src="../assets/img/icon/flutter.png" alt="flutter-icon">
           <img class="icon" src="../assets/img/icon/dart.png" alt="dart-icon">
         </div>
-
-        <div class="col-xs col-sm" @click="TypingEffect.addToTyping(game, typingEffect)">
-          <h2>Game</h2>
-          <img class="icon" src="../assets/img/icon/unity.png" alt="unity-icon">
-          <img class="icon" src="../assets/img/icon/c-sharp.png" alt="c-sharp-icon">
-        </div>
       </div>
 
       <hr class="contact-me-line">
